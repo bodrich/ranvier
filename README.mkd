@@ -16,70 +16,54 @@ Ranvier также имеет [графический редактор мира]
 ## Документация
 
 Очень подробная документация для движка есть на [официальном сайте](http://www.ranviermud.com)
-Ranvier prides itself on having thorough documentation which is available on our website: [ranviermud.com](http://www.ranviermud.com)
-(You can also view them locally; see the Documentation section of our [Contributing](http://www.ranviermud.com/contributing/#documentation) guide.)
 
-## Slack
+## Discord
 
-We have a Slack channel you can use to ask questions, suggest features, or just keep up to date with the project: [https://ranviermud.slack.com](https://ranviermud.slack.com)
+Меня можно найти в дискорде, посвященному российским MUD'ам. 
+Ссылка на дискорд https://discord.gg/RPaz6ut
 
-[Get an invite](https://join.slack.com/t/ranviermud/shared_invite/enQtMzczMDU3MDkxODc5LWVjZmUwNjBmNGFjYjZjOTM2OTcyMDMzZTJjZmNlOWZjNWJmNjVmMTg4ODFmOWQ3Yjg2Y2U5OTIyYTgyZTE2ZTA)
+## Особенности
+* Система бандлов: практически каждая часть игры может быть изменена без изменения ядра и не зависит друг от друга
+* Можно легко добавить новый сетевой протокол для игры.
+* Дополнительная система координат
+* Поддержка скриптов. Кодовая база на JS. Скрипты, сюрприз, тоже на JS.
+* Все сценарии основны на событиях.
+* Все данные хранятся в формате JSON
+* Комнаты, предметы и NPC хранятся в YAML
 
-## Features
+### Готовые бандлы
 
-* Robust bundle system: Nearly every aspect of the game can be modified without changing the core and allows for easy
-  packaging and sharing of commands/areas/items/npcs/channels/behaviors
-* Unopinionated network layer: easily swap out telnet for any network layer you like. No need to gut the whole codebase
-  just to support a different transport type, just drop in a file.
-* Optional coordinate based room system allowing for the flexibilty of a standard MUD world with the easy mappability of
-  a strict 3D world.
-* Scripting support: It's in JavaScript! No need for a shitty DSL. The codebase is JavaScript, the scripting is JavaScript.
-* Scripting is event-based. Put a listener in the script attached to your mob and it'll automagically happen when the
-  event is emitted. Adding new events is easy as `npc.emit('eventName')` See documentation on Node.js event emitters for more detail
-* Pfile saving in JSON, easy to parse for external usage
-* Rooms, items, and NPCs are easily described in YAML. No weird bullshit ~~~~ and byte-specific parsing that requires a
-  GUI editor to build (though we do have a GUI editor in the works!)
-* Did I mention it's in blasting JavaScript? No compiling, no C, no cygwin, no 15 year old spaghetti code
-* An accompanying client for use with websockets: [Neuro](https://github.com/shawncplus/neuro)
-* A GUI area builder: [Soma](https://github.com/shawncplus/soma)
+На данный момент в игре есть следующие бандлы:
 
-### Example Bundles
+* Поддержка telnet-соединений
+* Классы
+* Уровни
+* Пассивные и активные умения
+* Заклинания
+* Различные каналы для сообщений
+* Система комманд
+* Квестовая система
+* Простая Diku-styke боевая система
+* Группы игроков
+* Запираемые/закрываемые двери у комнат и предметов
+* Таблица дропа вещей
+* Валютная система с поддержкой сразу нескольких валют
+* Транспортная система
+* Магазины
+* Сбор ресурсов и крафт вещей
+* Мини-карта
+* Эмоции
+* NPC
+  * NPC, которые сами нападают на игроков
+  * NPC, которые блуждают по миру
+  * NPC, которые говорят с помощью API.AI (поддерживает русский язык)
 
-Ranvier is built on the concept of bundles: self-contained packages that are combined to create the game you want
-without having to modify the core engine. The example bundles combine to make a basic Diku-style MUD with the following
-features:
 
-* Telnet connections
-* Classes
-* Leveling
-* Passive/active skills
-* Spell effects
-* Flexible channel system
-* Incredibly simple-to-add commands
-* Quest system allowing for starting/progress/completion from any event in the game
-* Simple Diku-style combat system
-* Grouping/following
-* Rooms with closeable/lockable doors, and items that can be closed/locked
-* Loot tables allowing for meta pools for things like world or area drops in addition to NPC specific loot
-* Currency system allowing NPCs to be configured to drop different amounts of multiple currencies instead of just gold
-* A fast travel wayshrine system
-* Vendors with the ability to list items of multiple currencies
-* Crafting/resource gathering
-* Player minimap option
-* Emotes
-* NPC behaviors
-  * Create NPCs aggressive to players or other NPCs (in general or specific NPC types)
-  * Wandering NPCs (optionally restricted to certain paths or areas)
-  * Conversational NPCs controlled via an integration with [API.AI](https://api.ai)
-
-You can build your game using these bundles or disable them and build yours completely fresh while still taking
-advantage of all of the core code.
-
-## Requirements
+## Зависимости
 
 * Node.js >= v8.9.4
 
-## "I just want to check it out quickly"
+## Установка
 
 ```sh
 git clone git://github.com/shawncplus/ranviermud
@@ -87,13 +71,7 @@ cd ranviermud
 npm install
 npm run bundle-install
 ./ranvier
-telnet localhost 4000
 ```
 
+Мад будет запущен на 4000 порту, логин и пароль администратора `admin`/`ranviermud`
 The default admin user/pass is `admin`/`ranviermud`
-
-## Play it
-
-To try out what Ranvier looks like out of the box, as a player, `telnet` or point your favorite client to
-mud.ranviermud.com on port 4000. The server is updated from the Github `staging` branch, reset, and restarted every
-hour.
