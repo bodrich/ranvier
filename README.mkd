@@ -2,32 +2,20 @@
 
 # ranvier
 
-## Node.js-based MUD engine
+## MUD-движок написанный на Node.js
 
-See the [staging](https://github.com/shawncplus/ranviermud/tree/staging) branch for the latest features. Current version: 2.0
+Оригинальная версия движка находится здесь [staging](https://github.com/shawncplus/ranviermud/tree/staging)
+Это же русифицированная его версия.
 
-Ranvier is a [MUD](https://en.wikipedia.org/wiki/MUD) game engine. Out of the box Ranvier is configured to use a telnet
-server and will work with any MUD client you've used to connect to other MUDs. It runs a websocket server simultaneously,
-meaning players can also connect to your game with a websocket client at the same time. However, Ranvier supports any transport
-server you want to use; changing the entire networking layer is as easy as adding a command.
+Ranvier это [MUD](https://en.wikipedia.org/wiki/MUD)-движок. По умолчанию Ranvier настроен на использование сервера telnet и будет работать с любым клиентом MUD. Так же у него есть возможность поддержки WebSocket. Любой другой транспортный протокол можно подключить без особых проблем.
 
-There is an accompanying client specifically built for the websocket bundle which can be found in the Neuro repo: [github.com/shawncplus/neuro](https://github.com/shawncplus/neuro)
+Web-клиент для Ranvier-mud можно найти [здесь](https://github.com/shawncplus/neuro)
 
-<p align="center">
-  <img width="640" src="https://raw.githubusercontent.com/shawncplus/neuro/master/assets/demo.gif" />
-</p>
-<div style="text-align: center"><em>Ranvier with websockets and the Neuro client</em></div>
+Ranvier также имеет [графический редактор мира](https://github.com/shawncplus/neuro).
 
-Ranvier also has a GUI builder available, [Soma](https://github.com/shawncplus/soma).
+## Документация
 
-<p align="center">
-  <img width="640" src="https://raw.githubusercontent.com/shawncplus/soma/master/assets/screenshot.png" />
-</p>
-<div style="text-align: center"><em>Editing an area with Soma</em></div>
-
-
-## Documentation
-
+Очень подробная документация для движка есть на [официальном сайте](http://www.ranviermud.com)
 Ranvier prides itself on having thorough documentation which is available on our website: [ranviermud.com](http://www.ranviermud.com)
 (You can also view them locally; see the Documentation section of our [Contributing](http://www.ranviermud.com/contributing/#documentation) guide.)
 
