@@ -1,0 +1,6 @@
+---
+command: quit
+body: |
+  Выйти из игры.
+related:
+- save
