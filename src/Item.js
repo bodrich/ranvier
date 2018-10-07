@@ -66,6 +66,12 @@ class Item extends Metadatable(EventEmitter) {
     this.closed      = item.closed || false;
     this.locked      = item.locked || false;
     this.lockedBy    = item.lockedBy || null;
+    this.sex = data.sex;
+    this.genitive_case = data.genitive_case;
+    this.dative_case = data.dative_case;    
+    this.accusative_case = data.accusative_case;
+    this.prepositional_case = data.prepositional_case;
+    this.instrumental_case = data.instrumental_case;
   }
 
   /**

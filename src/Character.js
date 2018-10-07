@@ -493,6 +493,23 @@ class Character extends Metadatable(EventEmitter) {
   get isNpc() {
     return false;
   }
+
+  getCase(value)
+  {
+    if (value == 0 || value == "именительный" || value == "nominative")
+      return this.name;
+    if (value == 1 || value == "родительный" || value == "genitive")
+      return this.genitive_case;
+    if (value == 2 || value == "дательный" || value == "dative")
+      return this.dative_case;
+    if (value == 3 || value == "винительный" || value == "accusative")
+      return this.accusative_case;
+    if (value == 4 || value == "творительный" || value == "instrumental")
+      return this.instrumental_case;
+    if (value == 5 || value == "предложный" || value == "repositional")
+      return this.prepositional_case;
+    return "!ERROR CASE!";
+  }
 }
 
 module.exports = Character;

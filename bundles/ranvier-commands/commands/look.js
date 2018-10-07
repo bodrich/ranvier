@@ -114,9 +114,9 @@ module.exports = (srcPath, bundlePath) => {
     // show all the items in the rom
     room.items.forEach(item => {
       if (item.hasBehavior('resource')) {
-        B.sayAt(player, `[${ItemUtil.qualityColorize(item, 'Resource')}] <magenta>${item.roomDesc}</magenta>`);
+        B.sayAt(player, `[${ItemUtil.qualityColorize(item, 'Ресурс')}] <magenta>${item.roomDesc}</magenta>`);
       } else {
-        B.sayAt(player, `[${ItemUtil.qualityColorize(item, 'Item')}] <magenta>${item.roomDesc}</magenta>`);
+        B.sayAt(player, `[${ItemUtil.qualityColorize(item, 'Предмет')}] <magenta>${item.roomDesc}</magenta>`);
       }
     });
 
@@ -162,19 +162,19 @@ module.exports = (srcPath, bundlePath) => {
       let npcLabel = 'NPC';
       switch (true) {
         case (player.level  - npc.level > 4):
-          npcLabel = '<cyan>NPC</cyan>';
+          npcLabel = '<cyan>Неигровой персонаж</cyan>';
           break;
         case (npc.level - player.level > 9):
-          npcLabel = '<b><black>NPC</black></b>';
+          npcLabel = '<b><black>Неигровой персонаж</black></b>';
           break;
         case (npc.level - player.level > 5):
-          npcLabel = '<red>NPC</red>';
+          npcLabel = '<red>Неигровой персонаж</red>';
           break;
         case (npc.level - player.level > 3):
-          npcLabel = '<yellow>NPC</red>';
+          npcLabel = '<yellow>Неигровой персонаж</red>';
           break;
         default:
-          npcLabel = '<green>NPC</green>';
+          npcLabel = '<green>Неигровой персонаж</green>';
           break;
       }
       B.sayAt(player, `[${npcLabel}] ` + npc.name + combatantsDisplay);
