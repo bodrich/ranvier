@@ -2,7 +2,7 @@
 
 module.exports = srcPath => {
   return {
-    name: 'Витязь',
+    name: 'Паладин',
     description: 'Воины света.',
 
     abilityTable: {

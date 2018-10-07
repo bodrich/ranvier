@@ -9,7 +9,7 @@
  */
 module.exports = srcPath => {
   return {
-    name: 'Богатырь',
+    name: 'Воин',
     description: 'Воин с железными кулаками',
 
     abilityTable: {

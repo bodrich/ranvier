@@ -11,7 +11,7 @@ module.exports = (srcPath) => {
       const say = EventUtil.genSay(socket);
       const write  = EventUtil.genWrite(socket);
 
-      say('Ваш пол? (Мужской/Женский)');
+      write('Ваш пол? (Мужской/Женский)');
       socket.once('data', sex => {
         sex = sex.toString().trim().toLowerCase();        
         if (sex.startsWith("м")) {

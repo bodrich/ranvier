@@ -1,8 +1,8 @@
 - id: 1
-  keywords: ['rat']
-  name: A Rat
+  keywords: ['rat', 'крыса']
+  name: Крыса
   level: 2
-  description: "The rat's beady red eyes dart frantically, its mouth foaming as it scampers about."
+  description: "Маленькая крыса с красными глазами."
   script: '1-rat'
   items: ['limbo:2']
   quests: ['limbo:2']
@@ -15,25 +15,25 @@
     health: 100
     energy: 100
 - id: 2
-  keywords: ["wise", "old", "man"]
-  name: "Wise Old Man"
+  keywords: ["wise", "old", "man", 'старый', 'мужчина', 'мудрец']
+  name: "Мудрец"
   level: 99
   script: '2-old-man'
   pacifist: true
-  description: "A wise looking old man sits on the ground with legs crossed."
+  description: "Мудрый старик сидит на земле со скрещенными ногами."
   behaviors:
     ranvier-sentient: true
 - id: 3
-  keywords: ["puppy", "dog", "loyal", "wide", "eyed", "wide-eyed"]
-  name: A Puppy
-  description: "A wide-eyed puppy stares up at you."
+  keywords: ["puppy", "dog", "loyal", "wide", "eyed", "wide-eyed", "щенок", "собака"]
+  name: Щенок
+  description: "Какой милый щенок, мимими."
   pacifist: true
   level: 1
   script: '3-puppy'
 - id: 4
-  keywords: ["dummy", "target", "practice"]
+  keywords: ["dummy", "target", "practice", 'цель', 'болванка', 'манекен']
   level: 2
-  name: "Training Dummy"
+  name: "Тренировочный манекен"
   attributes:
     health: 100
     strength: 10
@@ -59,8 +59,8 @@
     discern; it seems to constantly change between metal, wood, cloth, and glass depending on the angle. There is a
     large red and white bullseye painted on its chest. The dummy has no eyes and mindlessly meanders about the area.
 - id: 5
-  keywords: ["boss", "target", "dummy", "practice"]
-  name: "Boss Training Dummy"
+  keywords: ["boss", "target", "dummy", "practice", 'Босс']
+  name: "Босс"
   level: 5
   description: >-
     This dummy is significantly larger than the others. Bright red with a monstrous figure it lumbers around the area
@@ -80,8 +80,8 @@
         - "limbo:5": 100
         - "limbo:9": 5
 - id: 6
-  keywords: ["wally", "wonderful", "shop", "vendor"]
-  name: "Wally the Wonderful"
+  keywords: ["wally", "wonderful", "shop", "vendor", 'продавец']
+  name: "Продавец"
   description: >-
     Moe's Shop has the best wares in town! Armor, weapons and potions, you name and we ... might have it!
   level: 99
@@ -108,12 +108,12 @@
         "limbo:9":
           cost: 99999
           currency: gold
-      enterMessage: "Step right up! Get your wares at Moe's Shop!"
-      leaveMessage: "Come back soon!"
+      enterMessage: "Добро пожаловать!"
+      leaveMessage: "Приходите еще!"
 - id: aggro-player-test
-  keywords: ["test", "aggro", "dummy"]
+  keywords: ["test", "aggro", "dummy", "манекен"]
   level: 2
-  name: "Player-aggressive Training Dummy"
+  name: "Агрессивный манекен"
   description: >-
     This NPC is aggressive towards players but not other NPCs. Be careful.
   attributes:
@@ -124,9 +124,9 @@
     ranvier-aggro:
       delay: 5
 - id: aggro-npc-test
-  keywords: ["test", "aggro", "dummy"]
+  keywords: ["test", "aggro", "dummy", "манекен"]
   level: 2
-  name: "Self-hating Training Dummy"
+  name: "Манекен-каннибал"
   description: >-
     This NPC is aggressive towards other NPCs but not to the player.
   attributes:

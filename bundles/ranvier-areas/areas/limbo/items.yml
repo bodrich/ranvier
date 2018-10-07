@@ -1,8 +1,8 @@
 - id: 1
-  name: "Rusty Sword"
+  name: "Ржавый меч"
   type: WEAPON
-  roomDesc: "Rusted Sword"
-  keywords: [ "sword", "rusty", "metal", "rusted" ]
+  roomDesc: "Ржавый меч"
+  keywords: [ "sword", "rusty", "metal", "rusted", "ржавый", "меч" ]
   description: "An arm's-length, jagged metal sword discolored with red corrosion. The worn leather grip barely held on by fraying thread."
   script: "1-sword"
   metadata:
@@ -16,18 +16,18 @@
     stats:
       critical: 1
 - id: 2
-  name: "Slice of Cheese"
-  roomDesc: "A moldy slice of cheese"
-  keywords: [ "slice", "cheese", "moldy" ]
+  name: "Кусок сыра"
+  roomDesc: "Размороженный ломтик сыра"
+  keywords: [ "slice", "cheese", "moldy", "кусок", "ломтик", "сыр" ]
   description: "A yellow, slightly moldy slice of cheese. Only a rat could find this appetizing."
   behaviors:
     decay:
       duration: 240
 - id: 3
   type: CONTAINER
-  name: "Wooden Chest"
-  roomDesc: "A wooden chest rests in the corner, its hinges badly rusted."
-  keywords: [ "wooden", "chest" ]
+  name: "Деревянный сундук"
+  roomDesc: "Деревянный сундук с ржавыми петлями"
+  keywords: [ "wooden", "chest", "деревянный", "сундук" ]
   description: "Time has not been kind to this chest. It seems to be held together solely by the dirt and rust."
   items: [ "limbo:1", "limbo:6", "limbo:7", "limbo:8" ]
   closed: true
@@ -35,20 +35,20 @@
   metadata:
     noPickup: true
 - id: 4
-  name: "Scraps"
+  name: "Остатки"
   quality: poor
-  roomDesc: "Scraps from a Training Dummy"
-  keywords: [ "dummy", "scraps" ]
+  roomDesc: "Остатки манекена"
+  keywords: [ "dummy", "scraps", "остатки", "манекена" ]
   description: "Splintered, shattered, and generally destroyed remains of a training dummy"
   behaviors:
     sellable:
       value: 5
       currency: gold
 - id: 5
-  name: "Training Sword"
+  name: "Тренеровочный меч"
   type: WEAPON
-  roomDesc: "Training Sword"
-  keywords: ["sword", "training", "iron"]
+  roomDesc: "Тренеровочный меч"
+  keywords: ["sword", "training", "iron", "тренеровочный", "меч"]
   description: "A hefty iron blade. Not the sharpest sword in the world but it will get the job done."
   metadata:
     quality: rare
@@ -67,10 +67,10 @@
       value: 30
       currency: gold
 - id: 6
-  name: "Leather Vest"
+  name: "Кожаная куртка"
   type: ARMOR
-  roomDesc: "Leather Vest"
-  keywords: ["leather", "vest"]
+  roomDesc: "Кожаная куртка"
+  keywords: ["leather", "vest", "кожаная", 'куртка']
   description: "A plain leather vest. Better than nothing."
   metadata:
     quality: common
@@ -84,9 +84,9 @@
       value: 30
       currency: gold
 - id: 7
-  name: "Potion of Health I"
-  roomDesc: "Potion of Health I"
-  keywords: [ "potion", "health" ]
+  name: "Зелье здоровья I"
+  roomDesc: "Зелье здоровья I"
+  keywords: [ "potion", "health", "зелье", "здоровье" ]
   type: POTION
   metadata:
     level: 1
@@ -106,9 +106,9 @@
         restores: 30
         stat: "health"
 - id: 8
-  name: "Potion of Strength I"
-  roomDesc: "Potion of Strength I"
-  keywords: [ "potion", "strength" ]
+  name: "Зелье силы I"
+  roomDesc: "Зелье силы I"
+  keywords: [ "potion", "strength", "зелье", "силы" ]
   type: POTION
   metadata:
     level: 1
@@ -148,10 +148,10 @@
       stamina: 2
       critical: 3
 - id: 10
-  name: "Wooden Shield"
+  name: "Деревянный щит"
   type: ARMOR
-  roomDesc: "Wooden Shield"
-  keywords: ["shield", "wooden"]
+  roomDesc: "Деревянный щит"
+  keywords: ["shield", "wooden", "деревянный", "щит"]
   description: "A rather uninteresting looking wooden shield. A rusted metal band barely hold its together and the leather arm band is nearly torn."
   metadata:
     quality: common
@@ -165,9 +165,9 @@
       value: 30
       currency: gold
 - id: test_key
-  name: "Oddly-shaped Key"
-  keywords: ["key", "odd", "oddly", "shaped"]
-  roomDesc: "A strange looking key"
+  name: "Старый ключ"
+  keywords: ["key", "odd", "oddly", "shaped", "старый", "ключ"]
+  roomDesc: "Старый ключ"
   description: "This key seems overly complex with numerous grooves."
   metadata:
     quality: common

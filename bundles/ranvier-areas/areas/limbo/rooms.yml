@@ -1,6 +1,10 @@
 - id: 1
-  title: Тестовая комната номер один
-  description: "Просто белая комната"
+  title: Тестовая комната
+  description: "Просто белая комната с НИЧЕМ. Здесь НИЧЕГО нет, не было и не будет. А здесь просто красивое описание
+  Ярко-синий камень в форме сердца, обрамленный в рамку из серебристых страз – это очень красиво и оригинально.
+  При попадании прямых лучей света, кулон начинает сверкать приятными переливами, притягивая к себе внимание
+  и интерес. Сделан кристалл только из высококачественных материалов, что служит гарантом его надежности и
+  износостойкости."
   npcs: ["limbo:1" ]
   items:
     - id: "limbo:3"
@@ -10,7 +14,7 @@
   exits:
     - roomId: "limbo:2"
       direction: восток
-      leaveMessage: " steps into the void and disappears."
+      leaveMessage: " уш(ел, ла, ел) на восток."
     - roomId: "limbo:8"
       direction: вниз
     - roomId: "limbo:9"
@@ -18,11 +22,12 @@
     - roomId: "mapped:start"
       direction: север
 - id: 2
-  title: "Test Room 2"
+  title: "Тестовая комната 2"
   description: >-
-    A completely black room. Somehow all of the light that should be coming from the room to the west does not pass
-    through the archway. A single lightbulb hangs from the ceiling illuminating a small area. To the east you see a
-    large white dome. There is a sign above the entrance to the dome: "Training Area"
+    Полностью черная комната. Каким-то образом весь свет, который должен
+    проходить из комнаты на запад поглощается аркой. Одна лампочка висит на потолке,
+    освещая небольшую площадь. На востоке вы видите большой белый купол. Над 
+    входом в купло вы можете разглядеть надпись: "Тренировочная зона"
   script: "2-look"
   items:
     - id: "limbo:2"
@@ -30,29 +35,28 @@
   npcs: ["limbo:2", "limbo:3"]
   exits:
     - roomId: "limbo:1"
-      direction: west
-      leaveMessage: " steps into the light and disappears."
+      direction: запад
+      leaveMessage: " уш(ел, ла, ел) на запад."
     - roomId: "limbo:3"
-      direction: east
+      direction: восток
 - &trainingroom
   id: 3
-  title: "Training Room"
+  title: "Тренировочная комната"
   script: "combat-training"
   description: >-
-    The entire area is covered by a large dome with a hexagonal grid surface. A beautiful blue sky reaches from horizon
-    to horizon, punctuated by the lines of the grid. The dome shimmers as virtual birds fly into and out of its surface.
-    The pure green grass is eerily undisturbed by you walking over it or by the simulated breeze.
+    Вся площадь покрыта огромным куполом из прозрачной сетки. Где-то за сеткой вы наблюдается красивое голубое небо,
+    по которому летают птицы. Под ногами у вас чистая зеленая трава, которая чуть колыхается от ветра. 
   npcs:
     - id: "limbo:4"
       respawnChance: 25
       maxLoad: 3
   exits:
     - roomId: "limbo:2"
-      direction: west
+      direction: запад
     - roomId: "limbo:4"
-      direction: north
+      direction: север
     - roomId: "limbo:6"
-      direction: east
+      direction: восток
 - <<: *trainingroom
   id: 4
   items:
@@ -67,9 +71,9 @@
       maxLoad: 1
   exits:
     - roomId: "limbo:3"
-      direction: south
+      direction: юг
     - roomId: "limbo:5"
-      direction: east
+      direction: восток
 - <<: *trainingroom
   id: 5
   items:
@@ -77,11 +81,11 @@
       respawnChance: 15
   exits:
     - roomId: "limbo:4"
-      direction: west
+      direction: запад
     - roomId: "limbo:6"
-      direction: south
+      direction: юг
     - roomId: "limbo:7"
-      direction: north
+      direction: север
 - <<: *trainingroom
   id: 6
   npcs:
@@ -93,75 +97,74 @@
       maxLoad: 2
   exits:
     - roomId: "limbo:3"
-      direction: west
+      direction: запад
     - roomId: "limbo:5"
-      direction: north
+      direction: север
 - id: 7
-  title: "Boss Training Room"
+  title: "Тренировочная комната с боссом"
   description: >-
-    The dome in this section is bright red, the pure green grass is replaced with a smooth white surface. The ground
-    beneath your feet has the word "Danger" in bright red letters tiled across the area.
+    Цвет неба за сеткой купола сменился с голубого на красный. Под ногами вместо зеленый травы просто гладкий пол выложенный
+    плитками. Присмотревшись, вы заметили, что на каждой плитке есть надпись: "Опасность!"
   npcs:
     - id: "limbo:5"
       respawnChance: 50
   exits:
     - roomId: "limbo:5"
-      direction: south
+      direction: юг
 - id: 8
-  title: "Ancient Wayshrine (Waypoint)"
+  title: "Древний храм (Вейпоинт)"
   description: >
-    A runed black obelisk towers in the center of this clearing, surrounded by a faerie ring. The runes pulse and glow with
-    a soft blue light. The grass immediately around the obelisk is immaculate in stark contrast to the dying former meadow
-    that makes up the clearing. The obelisk looks like it can be used as a <b><cyan>waypoint</cyan></b>.
+    Большой черный обелиск, окруженный витиеватым кольцом, возвышается в центре храма. Весь
+    обелиск покрыт рунами, которые источают пульсирующий мягкий синий цвет. Трава возле обелиска
+    выжжена. Обелиск выглядит так, как будто здесь можно применить команду <cyan>вейпоинт</cyan></b>
   script: '8-waypoint'
   behaviors:
     waypoint: true
   exits:
     - roomId: "limbo:1"
-      direction: up
+      direction: вверх
     - roomId: "limbo:10"
-      direction: down
+      direction: вниз
 - id: 9
-  title: "Wally's Wonderful Wares (Shop)"
+  title: "Магазин Чудесных Товаров"
   description: >- 
-    A very brightly colored shop stall stands in the middle of an otherwise desolate clearing. The stall is covered in
-    colorful cloth, shining gems, and battle gear of all varieties. A large sign sits next to the products:
-    "<b><yellow>Wally's Wonderful Wares</yellow></b> has the best products in town! Armor, weapons and potions, you name
-    and we... might have it!"
+    Ярко окрашенный магазин стоит посреди пустыни. На витрине расположены разнообразные красочные ткани,
+    блестящие драгоценные камни и боевая экипировка. Над витриной находится вывеска, которая гласит, что
+    только здесь продаются самые лучшие товары во все мире.
   npcs:
     - id: "limbo:6"
       respawnChance: 0
   exits:
     - roomId: "limbo:1"
-      direction: east
+      direction: восток
 - id: 10
-  title: "Room Context Commands Test"
+  title: "Эта комната для тестировании команды roomtest"
   script: '10-context'
   description: >-
-    This room shows off commands that are only active in a particular room. Try out the <b><cyan>roomtest</cyan></b> command.
+    Набери 'roomtest' - эта команда активна только в этой руме, прикольно, да ?:)
   behaviors:
     commands: [ 'roomtest' ]
   items:
     - id: "limbo:test_key"
   exits:
     - roomId: "limbo:8"
-      direction: up
+      direction: вверх
     - roomId: "limbo:11"
-      direction: east
+      direction: восток
   doors:
     "limbo:8":
       lockedWith: false
       closed: true
 - id: 11
-  title: "Locked room with key"
-  description: This room requires a key to get into
+  title: "Закрытая комната с ключем"
+  description: Вам нужен ключ, чтобы пройти дальше!
   items:
     - id: "limbo:locked_chest"
       respawnChance: 5
       replaceOnRespawn: true
   exits:
     - roomId: "limbo:10"
-      direction: west
+      direction: запад
   doors:
     "limbo:10":
       lockedBy: "limbo:test_key"

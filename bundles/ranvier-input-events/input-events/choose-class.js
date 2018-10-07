@@ -24,13 +24,13 @@ module.exports = (srcPath) => {
         return [id, instance.config];
       });
       for (const [ id, config ] of classes) {
-        say(`[<bold>${id}</bold>] - <bold>${config.name}</bold>`);
+        say(`<bold>${config.name}</bold>`);
         say(Broadcast.wrap(`      ${config.description}\r\n`, 80));
       }
       write('> ');
 
       socket.once('data', choice => {
-        choice = choice.toString().trim();
+        choice = choice.toString().trim().toLowerCase();
         choice = classes.find(([id, config]) => {
           return id.includes(choice) || config.name.toLowerCase().includes(choice);
         });
